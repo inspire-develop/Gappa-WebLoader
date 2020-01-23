@@ -269,4 +269,3 @@ class Extension extends CompilerExtension
 		return file_exists($file);
 	}
 }
-
