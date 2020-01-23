@@ -77,6 +77,10 @@ class Panel implements IBarPanel
 		];
 		$this->files = $this->sizes = [];
 
+		/**
+		 * @var string $name
+		 * @var Compiler $compiler
+		 */
 		foreach ($this->compilers as $name => $compiler) {
 			$group = lcfirst(substr($name, $name[0] === 'c' ? 3 : 2));
 

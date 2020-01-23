@@ -49,7 +49,7 @@ class LoaderFactory
 	}
 
 
-	private function formatTempPath(string $name, $absoluteUrl = false): string
+	private function formatTempPath(string $name, bool $absoluteUrl = false): string
 	{
 		$lName = strtolower($name);
 		$tempPath = isset($this->tempPaths[$lName]) ? $this->tempPaths[$lName] : Extension::DEFAULT_TEMP_PATH;

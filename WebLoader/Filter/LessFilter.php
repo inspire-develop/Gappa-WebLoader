@@ -15,6 +15,7 @@ use WebLoader\Compiler;
  */
 class LessFilter
 {
+	/** @var lessc|null */
 	private $lc;
 
 

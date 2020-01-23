@@ -97,7 +97,7 @@ abstract class WebLoader extends Control
 	}
 
 
-	protected function getGeneratedFilePath(File $file)
+	protected function getGeneratedFilePath(File $file): string
 	{
 		$path = $this->tempPath . '/' . $file->getFile();
 

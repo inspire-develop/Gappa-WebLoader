@@ -139,7 +139,7 @@ class FileCollectionTest extends TestCase
 
 	public function testSplFileInfo()
 	{
-		$this->object->addFile(new \SplFileInfo(__DIR__ . '/fixtures/a.txt'));
+		$this->object->addFile((string) new \SplFileInfo(__DIR__ . '/fixtures/a.txt'));
 		$this->assertEquals(1, count($this->object->getFiles()));
 	}
 

@@ -66,9 +66,9 @@ class FileCollection implements \WebLoader\IFileCollection
 	}
 
 
-	public function addFile($file): void
+	public function addFile(string $file): void
 	{
-		$file = $this->cannonicalizePath((string) $file);
+		$file = $this->cannonicalizePath($file);
 
 		if (in_array($file, $this->files, true)) {
 			return;
@@ -78,14 +78,10 @@ class FileCollection implements \WebLoader\IFileCollection
 	}
 
 
-	/**
-	 * Add files
-	 * @param array|Traversable $files array list of files
-	 */
-	public function addFiles($files): void
+	public function addFiles(iterable $files): void
 	{
 		foreach ($files as $file) {
-			$this->addFile($file);
+			$this->addFile((string) $file);
 		}
 	}
 

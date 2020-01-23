@@ -26,7 +26,7 @@ class Extension extends CompilerExtension
 	public const EXTENSION_NAME = 'webloader';
 
 
-	public function getDefaultConfig()
+	public function getDefaultConfig(): array
 	{
 		return [
 			'jsDefaults' => [

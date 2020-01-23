@@ -19,6 +19,11 @@ class DefaultOutputNamingConvention implements \WebLoader\IOutputNamingConventio
 	private $suffix = '';
 
 
+	final public function __construct()
+	{
+	}
+
+
 	public static function createCssConvention(): self
 	{
 		$convention = new static();
@@ -84,7 +89,7 @@ class DefaultOutputNamingConvention implements \WebLoader\IOutputNamingConventio
 	}
 
 
-	protected function createHash(array $files, Compiler $compiler)
+	protected function createHash(array $files, Compiler $compiler): string
 	{
 		$parts = $files;
 		foreach ($files as $file) {

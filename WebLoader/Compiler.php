@@ -49,8 +49,11 @@ class Compiler
 	private $absoluteUrl = false;
 
 
-	public function __construct(IFileCollection $files, IOutputNamingConvention $convention, string $outputDir)
-	{
+	final public function __construct(
+		IFileCollection $files,
+		IOutputNamingConvention $convention,
+		string $outputDir
+	) {
 		$this->collection = $files;
 		$this->namingConvention = $convention;
 		$this->setOutputDir($outputDir);
@@ -255,7 +258,7 @@ class Compiler
 	}
 
 
-	protected function generateFiles(array $files, array $watchFiles = [])
+	protected function generateFiles(array $files, array $watchFiles = []): File
 	{
 		$name = $this->namingConvention->getFilename($files, $this);
 		$path = $this->outputDir . '/' . $name;
