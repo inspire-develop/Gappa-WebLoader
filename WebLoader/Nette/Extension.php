@@ -19,7 +19,10 @@ use WebLoader\FileNotFoundException;
  */
 class Extension extends CompilerExtension
 {
+	/** @var string */
 	public const DEFAULT_TEMP_PATH = 'webtemp';
+
+	/** @var string */
 	public const EXTENSION_NAME = 'webloader';
 
 
