@@ -1,7 +1,13 @@
 {
 	"name": "janmarek/webloader",
 	"description": "Tool for loading or deploying CSS and JS files into web pages",
-	"keywords": ["webloader", "css", "javascript", "assets", "nette"],
+	"keywords": [
+		"webloader",
+		"css",
+		"javascript",
+		"assets",
+		"nette"
+	],
 	"homepage": "http://addons.nette.org/cs/webloader",
 	"license": "MIT",
 	"authors": [
@@ -19,7 +25,8 @@
 		"php": ">= 7.1",
 		"nette/application": "^2.4",
 		"nette/di": "^2.4",
-		"nette/utils": "^2.4"
+		"nette/utils": "^2.4",
+		"phpstan/extension-installer": "^1.0"
 	},
 	"suggest": {
 		"oyejorge/less.php": "LESS compiler written in PHP.",
@@ -55,13 +62,26 @@
 		"mockery/mockery": "1.*",
 		"phpunit/phpunit": "7.*",
 		"jakub-onderka/php-parallel-lint": "~0.7",
-		"phpstan/phpstan-shim": "^0.11.0",
-		"phpstan/phpstan-nette": "^0.11.0",
+		"phpstan/phpstan": "^0.12.0",
+		"phpstan/phpstan-nette": "^0.12.0",
 		"symfony/console": "^4.3"
 	},
 	"extra": {
 		"branch-alias": {
 			"dev-master": "2.4-dev"
 		}
+	},
+	"prefer-stable": true,
+	"minimum-stability": "stable",
+	"config": {
+		"sort-packages": true
+	},
+	"scripts": {
+		"phpstan": "./phpstan/phpstan",
+		"tests": "./vendor/bin/phpunit --configuration tests/phpunit.xml tests",
+		"ci": [
+			"@phpstan",
+			"@tests"
+		]
 	}
 }
