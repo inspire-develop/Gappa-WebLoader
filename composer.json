@@ -17,7 +17,7 @@
 		}
 	],
 	"autoload": {
-		classmap": [
+		"classmap": [
 			"WebLoader"
 		]
 	},
