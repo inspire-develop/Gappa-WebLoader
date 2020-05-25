@@ -17,9 +17,9 @@
 		}
 	],
 	"autoload": {
-		"psr-0": {
-			"WebLoader\\": "WebLoader/"
-		}
+		classmap": [
+			"WebLoader"
+		]
 	},
 	"autoload-dev": {
 		"classmap": [
