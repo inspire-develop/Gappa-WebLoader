@@ -18,9 +18,14 @@
 	],
 	"autoload": {
 		"psr-0": {
-			"WebLoader": ""
+			"WebLoader\\": "WebLoader/"
 		}
 	},
+	"autoload-dev": {
+		"classmap": [
+			"tests"
+		]
+	},	
 	"require": {
 		"php": ">= 7.1",
 		"nette/application": "^2.4",
