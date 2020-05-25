@@ -17,6 +17,8 @@ use WebLoader\File;
  */
 class GenerateCommand extends Command
 {
+	/** @var string */
+	protected static $defaultName = 'webloader:generate';
 
 	/** @var Compiler[] */
 	private $compilers = [];
