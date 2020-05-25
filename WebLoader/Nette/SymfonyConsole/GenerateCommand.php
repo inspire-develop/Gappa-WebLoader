@@ -37,7 +37,7 @@ class GenerateCommand extends Command
 
 	protected function configure(): void
 	{
-		$this->setName('webloader:generate')
+		$this->setName(self::$defaultName)
 			->setDescription('Generates files.')
 			->addOption('force', 'f', InputOption::VALUE_NONE, 'Generate if not modified.');
 	}
